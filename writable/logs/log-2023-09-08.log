@@ -1,0 +1,13 @@
+INFO - 2023-09-08 02:02:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 02:22:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-08 02:28:01 --> Undefined property: App\Controllers\Kategori::$reqquest
+in APPPATH\Controllers\Kategori.php on line 20.
+ 1 APPPATH\Controllers\Kategori.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Kategori::$reqquest', 'C:\\xampp\\htdocs\\prjkgudang\\app\\Controllers\\Kategori.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Kategori->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kategori))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\prjkgudang\\public\\index.php')
+INFO - 2023-09-08 02:28:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 02:28:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 02:28:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

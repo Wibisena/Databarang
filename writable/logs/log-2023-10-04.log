@@ -1,0 +1,519 @@
+INFO - 2023-10-04 01:10:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-04 01:12:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-04 01:12:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-04 01:12:54 --> mysqli_sql_exception: Unknown column 'barang.id' in 'where clause' in C:\xampp\htdocs\prjkgudang\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\prjkgudang\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\prjkgudang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\prjkgudang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\prjkgudang\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\prjkgudang\system\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\prjkgudang\system\BaseModel.php(557): CodeIgniter\Model->doFind(true, '111')
+#6 C:\xampp\htdocs\prjkgudang\app\Controllers\Barang.php(230): CodeIgniter\BaseModel->find('111')
+#7 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(932): App\Controllers\Barang->updatedata()
+#8 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#9 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\prjkgudang\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\prjkgudang\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-10-04 01:12:54 --> Unknown column 'barang.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `barang`
+WHERE `barang`.`id` = \'111\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barang`
+WHERE `barang`.`id` = \'111\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barang`
+WHERE `barang`.`id` = \'111\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`
+WHERE `barang`.`id` = :barang.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(true, '111')
+ 7 APPPATH\Controllers\Barang.php(230): CodeIgniter\BaseModel->find('111')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Barang->updatedata()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\prjkgudang\\public\\index.php')
+INFO - 2023-10-04 01:12:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-04 01:13:00 --> mysqli_sql_exception: Unknown column 'barang.id' in 'where clause' in C:\xampp\htdocs\prjkgudang\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\prjkgudang\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\prjkgudang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\prjkgudang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\prjkgudang\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\prjkgudang\system\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\prjkgudang\system\BaseModel.php(557): CodeIgniter\Model->doFind(true, '111')
+#6 C:\xampp\htdocs\prjkgudang\app\Controllers\Barang.php(230): CodeIgniter\BaseModel->find('111')
+#7 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(932): App\Controllers\Barang->updatedata()
+#8 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#9 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\prjkgudang\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\prjkgudang\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-10-04 01:13:00 --> Unknown column 'barang.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `barang`
+WHERE `barang`.`id` = \'111\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barang`
+WHERE `barang`.`id` = \'111\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barang`
+WHERE `barang`.`id` = \'111\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`
+WHERE `barang`.`id` = :barang.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(true, '111')
+ 7 APPPATH\Controllers\Barang.php(230): CodeIgniter\BaseModel->find('111')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Barang->updatedata()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\prjkgudang\\public\\index.php')
+INFO - 2023-10-04 01:13:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-04 01:13:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-04 01:13:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-04 01:13:09 --> mysqli_sql_exception: Unknown column 'barang.id' in 'where clause' in C:\xampp\htdocs\prjkgudang\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\prjkgudang\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\prjkgudang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\prjkgudang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\prjkgudang\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\prjkgudang\system\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\prjkgudang\system\BaseModel.php(557): CodeIgniter\Model->doFind(true, '111')
+#6 C:\xampp\htdocs\prjkgudang\app\Controllers\Barang.php(230): CodeIgniter\BaseModel->find('111')
+#7 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(932): App\Controllers\Barang->updatedata()
+#8 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#9 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\prjkgudang\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\prjkgudang\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-10-04 01:13:09 --> Unknown column 'barang.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `barang`
+WHERE `barang`.`id` = \'111\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barang`
+WHERE `barang`.`id` = \'111\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barang`
+WHERE `barang`.`id` = \'111\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`
+WHERE `barang`.`id` = :barang.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(true, '111')
+ 7 APPPATH\Controllers\Barang.php(230): CodeIgniter\BaseModel->find('111')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Barang->updatedata()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\prjkgudang\\public\\index.php')
+INFO - 2023-10-04 01:20:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-04 01:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-04 01:21:04 --> mysqli_sql_exception: Unknown column 'barang.id' in 'where clause' in C:\xampp\htdocs\prjkgudang\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\prjkgudang\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\prjkgudang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\prjkgudang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\prjkgudang\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\prjkgudang\system\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\prjkgudang\system\BaseModel.php(557): CodeIgniter\Model->doFind(true, '111')
+#6 C:\xampp\htdocs\prjkgudang\app\Controllers\Barang.php(230): CodeIgniter\BaseModel->find('111')
+#7 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(932): App\Controllers\Barang->updatedata()
+#8 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#9 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\prjkgudang\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\prjkgudang\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-10-04 01:21:04 --> Unknown column 'barang.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `barang`
+WHERE `barang`.`id` = \'111\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barang`
+WHERE `barang`.`id` = \'111\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barang`
+WHERE `barang`.`id` = \'111\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`
+WHERE `barang`.`id` = :barang.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(true, '111')
+ 7 APPPATH\Controllers\Barang.php(230): CodeIgniter\BaseModel->find('111')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Barang->updatedata()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\prjkgudang\\public\\index.php')
+INFO - 2023-10-04 01:21:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-04 01:21:17 --> mysqli_sql_exception: Unknown column 'barang.id' in 'where clause' in C:\xampp\htdocs\prjkgudang\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\prjkgudang\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\prjkgudang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\prjkgudang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\prjkgudang\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\prjkgudang\system\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\prjkgudang\system\BaseModel.php(557): CodeIgniter\Model->doFind(true, '111')
+#6 C:\xampp\htdocs\prjkgudang\app\Controllers\Barang.php(230): CodeIgniter\BaseModel->find('111')
+#7 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(932): App\Controllers\Barang->updatedata()
+#8 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#9 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\prjkgudang\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\prjkgudang\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-10-04 01:21:17 --> Unknown column 'barang.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `barang`
+WHERE `barang`.`id` = \'111\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barang`
+WHERE `barang`.`id` = \'111\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barang`
+WHERE `barang`.`id` = \'111\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`
+WHERE `barang`.`id` = :barang.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(true, '111')
+ 7 APPPATH\Controllers\Barang.php(230): CodeIgniter\BaseModel->find('111')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Barang->updatedata()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\prjkgudang\\public\\index.php')
+INFO - 2023-10-04 01:33:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-04 01:33:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-04 01:34:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-04 01:50:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-04 01:50:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-04 01:50:10 --> mysqli_sql_exception: Unknown column 'barang.id' in 'where clause' in C:\xampp\htdocs\prjkgudang\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\prjkgudang\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `barang`...', 0)
+#1 C:\xampp\htdocs\prjkgudang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `barang`...')
+#2 C:\xampp\htdocs\prjkgudang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `barang`...')
+#3 C:\xampp\htdocs\prjkgudang\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `barang`...', Array, false)
+#4 C:\xampp\htdocs\prjkgudang\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\prjkgudang\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\prjkgudang\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\prjkgudang\app\Controllers\Barang.php(252): CodeIgniter\Model->update('111', Array)
+#8 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(932): App\Controllers\Barang->updatedata()
+#9 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#10 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\prjkgudang\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\prjkgudang\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-10-04 01:50:10 --> Unknown column 'barang.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `barang` SET `brgnama` = \'Boneka cantik\', `id_penerima` = \'31\', `brgstatus` = \'Keluar\', `brgcatatan` = \'Hadiah ulang tahun\', `brggambar` = \'\'
+WHERE `barang`.`id` IN (\'111\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `barang` SET `brgnama` = \'Boneka cantik\', `id_penerima` = \'31\', `brgstatus` = \'Keluar\', `brgcatatan` = \'Hadiah ulang tahun\', `brggambar` = \'\'
+WHERE `barang`.`id` IN (\'111\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `barang` SET `brgnama` = \'Boneka cantik\', `id_penerima` = \'31\', `brgstatus` = \'Keluar\', `brgcatatan` = \'Hadiah ulang tahun\', `brggambar` = \'\'
+WHERE `barang`.`id` IN (\'111\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `barang` SET `brgnama` = :brgnama:, `id_penerima` = :id_penerima:, `brgstatus` = :brgstatus:, `brgcatatan` = :brgcatatan:, `brggambar` = :brggambar:
+WHERE `barang`.`id` IN :barang.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Barang.php(252): CodeIgniter\Model->update('111', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Barang->updatedata()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\prjkgudang\\public\\index.php')
+INFO - 2023-10-04 01:50:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-04 01:50:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-04 01:50:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-04 01:50:45 --> mysqli_sql_exception: Unknown column 'barang.id' in 'where clause' in C:\xampp\htdocs\prjkgudang\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\prjkgudang\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `barang`...', 0)
+#1 C:\xampp\htdocs\prjkgudang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `barang`...')
+#2 C:\xampp\htdocs\prjkgudang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `barang`...')
+#3 C:\xampp\htdocs\prjkgudang\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `barang`...', Array, false)
+#4 C:\xampp\htdocs\prjkgudang\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\prjkgudang\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\prjkgudang\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\prjkgudang\app\Controllers\Barang.php(252): CodeIgniter\Model->update('111', Array)
+#8 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(932): App\Controllers\Barang->updatedata()
+#9 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#10 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\prjkgudang\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\prjkgudang\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-10-04 01:50:45 --> Unknown column 'barang.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `barang` SET `brgnama` = \'Boneka cantik\', `id_penerima` = \'31\', `brgstatus` = \'Masuk\', `brgcatatan` = \'Hadiah ulang tahun\', `brggambar` = \'\'
+WHERE `barang`.`id` IN (\'111\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `barang` SET `brgnama` = \'Boneka cantik\', `id_penerima` = \'31\', `brgstatus` = \'Masuk\', `brgcatatan` = \'Hadiah ulang tahun\', `brggambar` = \'\'
+WHERE `barang`.`id` IN (\'111\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `barang` SET `brgnama` = \'Boneka cantik\', `id_penerima` = \'31\', `brgstatus` = \'Masuk\', `brgcatatan` = \'Hadiah ulang tahun\', `brggambar` = \'\'
+WHERE `barang`.`id` IN (\'111\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `barang` SET `brgnama` = :brgnama:, `id_penerima` = :id_penerima:, `brgstatus` = :brgstatus:, `brgcatatan` = :brgcatatan:, `brggambar` = :brggambar:
+WHERE `barang`.`id` IN :barang.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Barang.php(252): CodeIgniter\Model->update('111', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Barang->updatedata()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\prjkgudang\\public\\index.php')
+INFO - 2023-10-04 01:51:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-04 01:51:54 --> mysqli_sql_exception: Unknown column 'barang.id' in 'where clause' in C:\xampp\htdocs\prjkgudang\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\prjkgudang\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `barang`...', 0)
+#1 C:\xampp\htdocs\prjkgudang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `barang`...')
+#2 C:\xampp\htdocs\prjkgudang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `barang`...')
+#3 C:\xampp\htdocs\prjkgudang\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `barang`...', Array, false)
+#4 C:\xampp\htdocs\prjkgudang\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\prjkgudang\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\prjkgudang\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\prjkgudang\app\Controllers\Barang.php(252): CodeIgniter\Model->update(Array, Array)
+#8 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(932): App\Controllers\Barang->updatedata()
+#9 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#10 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\prjkgudang\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\prjkgudang\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-10-04 01:51:54 --> Unknown column 'barang.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `barang` SET `brgnama` = \'Boneka cantik\', `id_penerima` = \'31\', `brgstatus` = \'Keluar\', `brgcatatan` = \'Hadiah ulang tahun\', `brggambar` = \'\'
+WHERE `barang`.`id` IN (\'111\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `barang` SET `brgnama` = \'Boneka cantik\', `id_penerima` = \'31\', `brgstatus` = \'Keluar\', `brgcatatan` = \'Hadiah ulang tahun\', `brggambar` = \'\'
+WHERE `barang`.`id` IN (\'111\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `barang` SET `brgnama` = \'Boneka cantik\', `id_penerima` = \'31\', `brgstatus` = \'Keluar\', `brgcatatan` = \'Hadiah ulang tahun\', `brggambar` = \'\'
+WHERE `barang`.`id` IN (\'111\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `barang` SET `brgnama` = :brgnama:, `id_penerima` = :id_penerima:, `brgstatus` = :brgstatus:, `brgcatatan` = :brgcatatan:, `brggambar` = :brggambar:
+WHERE `barang`.`id` IN :barang.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Barang.php(252): CodeIgniter\Model->update([...], [...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Barang->updatedata()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\prjkgudang\\public\\index.php')
+ERROR - 2023-10-04 01:57:26 --> mysqli_sql_exception: Unknown column 'barang.id' in 'where clause' in C:\xampp\htdocs\prjkgudang\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\prjkgudang\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `barang`...', 0)
+#1 C:\xampp\htdocs\prjkgudang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `barang`...')
+#2 C:\xampp\htdocs\prjkgudang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `barang`...')
+#3 C:\xampp\htdocs\prjkgudang\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `barang`...', Array, false)
+#4 C:\xampp\htdocs\prjkgudang\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\prjkgudang\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\prjkgudang\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\prjkgudang\app\Controllers\Barang.php(252): CodeIgniter\Model->update(Array, Array)
+#8 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(932): App\Controllers\Barang->updatedata()
+#9 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#10 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\prjkgudang\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\prjkgudang\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-10-04 01:57:26 --> Unknown column 'barang.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `barang` SET `brgnama` = \'Boneka cantik\', `id_penerima` = \'31\', `brgstatus` = \'Keluar\', `brgcatatan` = \'Hadiah ulang tahun\', `brggambar` = \'\'
+WHERE `barang`.`id` IN (\'111\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `barang` SET `brgnama` = \'Boneka cantik\', `id_penerima` = \'31\', `brgstatus` = \'Keluar\', `brgcatatan` = \'Hadiah ulang tahun\', `brggambar` = \'\'
+WHERE `barang`.`id` IN (\'111\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `barang` SET `brgnama` = \'Boneka cantik\', `id_penerima` = \'31\', `brgstatus` = \'Keluar\', `brgcatatan` = \'Hadiah ulang tahun\', `brggambar` = \'\'
+WHERE `barang`.`id` IN (\'111\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `barang` SET `brgnama` = :brgnama:, `id_penerima` = :id_penerima:, `brgstatus` = :brgstatus:, `brgcatatan` = :brgcatatan:, `brggambar` = :brggambar:
+WHERE `barang`.`id` IN :barang.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Barang.php(252): CodeIgniter\Model->update([...], [...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Barang->updatedata()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\prjkgudang\\public\\index.php')
+INFO - 2023-10-04 02:18:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-04 02:18:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-04 02:18:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-04 02:18:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-04 02:18:30 --> mysqli_sql_exception: Unknown column 'barang.id' in 'where clause' in C:\xampp\htdocs\prjkgudang\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\prjkgudang\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `barang`...', 0)
+#1 C:\xampp\htdocs\prjkgudang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `barang`...')
+#2 C:\xampp\htdocs\prjkgudang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `barang`...')
+#3 C:\xampp\htdocs\prjkgudang\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `barang`...', Array, false)
+#4 C:\xampp\htdocs\prjkgudang\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\prjkgudang\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\prjkgudang\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\prjkgudang\app\Controllers\Barang.php(252): CodeIgniter\Model->update(Array, Array)
+#8 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(932): App\Controllers\Barang->updatedata()
+#9 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#10 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\prjkgudang\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\prjkgudang\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-10-04 02:18:30 --> Unknown column 'barang.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `barang` SET `brgnama` = \'Boneka cantik\', `id_penerima` = \'31\', `brgstatus` = \'Keluar\', `brgcatatan` = \'Hadiah ulang tahun\', `brggambar` = \'\'
+WHERE `barang`.`id` IN (\'111\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `barang` SET `brgnama` = \'Boneka cantik\', `id_penerima` = \'31\', `brgstatus` = \'Keluar\', `brgcatatan` = \'Hadiah ulang tahun\', `brggambar` = \'\'
+WHERE `barang`.`id` IN (\'111\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `barang` SET `brgnama` = \'Boneka cantik\', `id_penerima` = \'31\', `brgstatus` = \'Keluar\', `brgcatatan` = \'Hadiah ulang tahun\', `brggambar` = \'\'
+WHERE `barang`.`id` IN (\'111\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `barang` SET `brgnama` = :brgnama:, `id_penerima` = :id_penerima:, `brgstatus` = :brgstatus:, `brgcatatan` = :brgcatatan:, `brggambar` = :brggambar:
+WHERE `barang`.`id` IN :barang.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Barang.php(252): CodeIgniter\Model->update([...], [...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Barang->updatedata()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\prjkgudang\\public\\index.php')
+INFO - 2023-10-04 02:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-04 02:21:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-04 02:21:48 --> mysqli_sql_exception: Unknown column 'barang.id' in 'where clause' in C:\xampp\htdocs\prjkgudang\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\prjkgudang\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `barang`...', 0)
+#1 C:\xampp\htdocs\prjkgudang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `barang`...')
+#2 C:\xampp\htdocs\prjkgudang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `barang`...')
+#3 C:\xampp\htdocs\prjkgudang\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `barang`...', Array, false)
+#4 C:\xampp\htdocs\prjkgudang\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\prjkgudang\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\prjkgudang\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\prjkgudang\app\Controllers\Barang.php(252): CodeIgniter\Model->update(Array, Array)
+#8 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(932): App\Controllers\Barang->updatedata()
+#9 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#10 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\prjkgudang\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\prjkgudang\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-10-04 02:21:48 --> Unknown column 'barang.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `barang` SET `brgnama` = \'Boneka cantik\', `id_penerima` = \'31\', `brgstatus` = \'Masuk\', `brgcatatan` = \'Hadiah ulang tahun\', `brggambar` = \'\'
+WHERE `barang`.`id` IN (\'111\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `barang` SET `brgnama` = \'Boneka cantik\', `id_penerima` = \'31\', `brgstatus` = \'Masuk\', `brgcatatan` = \'Hadiah ulang tahun\', `brggambar` = \'\'
+WHERE `barang`.`id` IN (\'111\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `barang` SET `brgnama` = \'Boneka cantik\', `id_penerima` = \'31\', `brgstatus` = \'Masuk\', `brgcatatan` = \'Hadiah ulang tahun\', `brggambar` = \'\'
+WHERE `barang`.`id` IN (\'111\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `barang` SET `brgnama` = :brgnama:, `id_penerima` = :id_penerima:, `brgstatus` = :brgstatus:, `brgcatatan` = :brgcatatan:, `brggambar` = :brggambar:
+WHERE `barang`.`id` IN :barang.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Barang.php(252): CodeIgniter\Model->update([...], [...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Barang->updatedata()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\prjkgudang\\public\\index.php')
+INFO - 2023-10-04 02:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-04 02:30:39 --> mysqli_sql_exception: Unknown column 'barang.id' in 'where clause' in C:\xampp\htdocs\prjkgudang\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\prjkgudang\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `barang`...', 0)
+#1 C:\xampp\htdocs\prjkgudang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `barang`...')
+#2 C:\xampp\htdocs\prjkgudang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `barang`...')
+#3 C:\xampp\htdocs\prjkgudang\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `barang`...', Array, false)
+#4 C:\xampp\htdocs\prjkgudang\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\prjkgudang\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\prjkgudang\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\prjkgudang\app\Controllers\Barang.php(252): CodeIgniter\Model->update(Array, Array)
+#8 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(932): App\Controllers\Barang->updatedata()
+#9 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#10 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\prjkgudang\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\prjkgudang\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-10-04 02:30:39 --> Unknown column 'barang.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `barang` SET `brgnama` = \'Boneka cantik\', `id_penerima` = \'31\', `brgstatus` = \'Keluar\', `brgcatatan` = \'Hadiah ulang tahun\', `brggambar` = \'\'
+WHERE `barang`.`id` IN (\'111\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `barang` SET `brgnama` = \'Boneka cantik\', `id_penerima` = \'31\', `brgstatus` = \'Keluar\', `brgcatatan` = \'Hadiah ulang tahun\', `brggambar` = \'\'
+WHERE `barang`.`id` IN (\'111\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `barang` SET `brgnama` = \'Boneka cantik\', `id_penerima` = \'31\', `brgstatus` = \'Keluar\', `brgcatatan` = \'Hadiah ulang tahun\', `brggambar` = \'\'
+WHERE `barang`.`id` IN (\'111\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `barang` SET `brgnama` = :brgnama:, `id_penerima` = :id_penerima:, `brgstatus` = :brgstatus:, `brgcatatan` = :brgcatatan:, `brggambar` = :brggambar:
+WHERE `barang`.`id` IN :barang.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Barang.php(252): CodeIgniter\Model->update([...], [...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Barang->updatedata()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\prjkgudang\\public\\index.php')
+INFO - 2023-10-04 02:31:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-04 02:31:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-04 02:31:16 --> mysqli_sql_exception: Unknown column 'barang.id' in 'where clause' in C:\xampp\htdocs\prjkgudang\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\prjkgudang\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `barang`...', 0)
+#1 C:\xampp\htdocs\prjkgudang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `barang`...')
+#2 C:\xampp\htdocs\prjkgudang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `barang`...')
+#3 C:\xampp\htdocs\prjkgudang\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `barang`...', Array, false)
+#4 C:\xampp\htdocs\prjkgudang\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\prjkgudang\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\prjkgudang\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\prjkgudang\app\Controllers\Barang.php(252): CodeIgniter\Model->update(Array, Array)
+#8 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(932): App\Controllers\Barang->updatedata()
+#9 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#10 C:\xampp\htdocs\prjkgudang\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\prjkgudang\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\prjkgudang\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-10-04 02:31:16 --> Unknown column 'barang.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `barang` SET `brgnama` = \'Boneka cantik\', `id_penerima` = \'31\', `brgstatus` = \'Keluar\', `brgcatatan` = \'Hadiah ulang tahun\', `brggambar` = \'\'
+WHERE `barang`.`id` IN (\'111\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `barang` SET `brgnama` = \'Boneka cantik\', `id_penerima` = \'31\', `brgstatus` = \'Keluar\', `brgcatatan` = \'Hadiah ulang tahun\', `brggambar` = \'\'
+WHERE `barang`.`id` IN (\'111\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `barang` SET `brgnama` = \'Boneka cantik\', `id_penerima` = \'31\', `brgstatus` = \'Keluar\', `brgcatatan` = \'Hadiah ulang tahun\', `brggambar` = \'\'
+WHERE `barang`.`id` IN (\'111\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `barang` SET `brgnama` = :brgnama:, `id_penerima` = :id_penerima:, `brgstatus` = :brgstatus:, `brgcatatan` = :brgcatatan:, `brggambar` = :brggambar:
+WHERE `barang`.`id` IN :barang.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Barang.php(252): CodeIgniter\Model->update([...], [...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Barang->updatedata()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\prjkgudang\\public\\index.php')
+INFO - 2023-10-04 02:47:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-04 02:47:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-04 02:47:29 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Barang.php(252): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Barang->updatedata()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\prjkgudang\\public\\index.php')
+INFO - 2023-10-04 03:21:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-04 03:21:16 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Barang.php(252): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Barang->updatedata()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\prjkgudang\\public\\index.php')
+INFO - 2023-10-04 03:21:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
