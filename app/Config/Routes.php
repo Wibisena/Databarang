@@ -35,6 +35,8 @@ $routes->get('/kategori/hapus/(:any)', 'kategori::index');
 $routes->delete('/kategori/hapus/(:any)', 'kategori::hapus/$1');
 $routes->get('login', 'AuthController::index');
 
+$routes->get('/barang/hapus/(:any)', 'Barang::index');
+$routes->delete('/barang/hapus/(:any)', 'Barang::hapus/$1');
 
 /*
  * --------------------------------------------------------------------

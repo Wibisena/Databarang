@@ -18,7 +18,7 @@ Manajemen Data Karyawan
 <?= session()->getFlashdata('sukses'); ?>
 <?= form_open('kategori/index') ?>
 <div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Cari data kategori" aria-label="Recipient's username" aria-describedby="button-addon2" name="cari" value="<?= $cari; ?>">
+    <input type="text" class="form-control" placeholder="Cari data karyawan" aria-label="Recipient's username" aria-describedby="button-addon2" name="cari" value="<?= $cari; ?>">
     <button class="btn btn-outline-primary" type="submit" id="tombolcari" name="tombolcari">
         <i class="fa fa-search"></i>
     </button>
@@ -47,7 +47,7 @@ Manajemen Data Karyawan
                         <i class="fa fa-edit"></i>
                     </button>
 
-                    <form method="POST" action="/kategori/hapus/<?= $row['katid'] ?>" style="display:inline;" onsubmit="hapus()">
+                    <form method="POST" action="/kategori/hapus/<?= $row['katid'] ?>" style="display:inline;" onsubmit="return hapus()">
                         <input type="hidden" value="DELETE" name="_method">
 
                         <button type="submit" class="btn btn-danger" title="Hapus Data">

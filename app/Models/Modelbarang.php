@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class Modelbarang extends Model
 {
     protected $table            = 'barang';
-    protected $primarykey       = 'brgkode';
+    protected $primaryKey       = 'brgkode';
     protected $useAutoIncrement = false;
     protected $allowedFields    = [
         'brgnama', 'id_penerima', 'brgstatus', 'brgcatatan', 'brggambar'
@@ -15,6 +15,6 @@ class Modelbarang extends Model
 
     public function tampildata()
     {
-        return $this->table('barang')->join('kategori', 'id_penerima=katid')->get();
+        return $this->table('barang')->join('kategori', 'id_penerima=katnama')->get();
     }
 }

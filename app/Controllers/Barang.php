@@ -233,8 +233,7 @@ class Barang extends BaseController
             $gambar = $_FILES['gambar']['name'];
 
             if ($gambar != NULL) {
-                unlink($pathGambarLama);
-
+                ($pathGambarLama == '' || $pathGambarLama == null) ? '' : unlink($pathGambarLama);
                 $namaFileGambar = $kodebarang;
                 $fileGambar = $this->request->getFile('gambar');
                 $fileGambar->move('upload', $namaFileGambar . '.' . $fileGambar->getExtension());
@@ -244,7 +243,7 @@ class Barang extends BaseController
                 $pathGambar = $pathGambarLama;
             }
 
-            $this->barang->where('brgkode', $kodebarang)->update([
+            $this->barang->update($kodebarang, [
                 'brgnama' => $namabarang,
                 'id_penerima' => $kategori,
                 'brgstatus' => $status,
@@ -261,6 +260,39 @@ class Barang extends BaseController
             ];
 
             session()->setFlashdata($pesan_sukses);
+            return redirect()->to('/barang/index');
+        }
+    }
+
+    public function hapus($kode)
+    {
+        $cekData = $this->barang->find($kode);
+
+        if ($cekData) {
+
+            $pathGambarLama = $cekData['brggambar'];
+            unlink($pathGambarLama);
+            $this->barang->delete($kode);
+            $pesan_sukses = [
+                'sukses' => '<div class="alert alert-success alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <h5><i class="icon fas fa-check"></i> Berhasil !</h5>
+            Data Barang dengan kode <strong> ' . $kode . ' </strong> berhasil dihapus
+            </div>'
+            ];
+
+            session()->setFlashdata($pesan_sukses);
+            return redirect()->to('/barang/index');
+        } else {
+            $pesan_error = [
+                'error' => '<div class="alert alert-danger alert dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                <h5><i class="icon fas fa-ban"></i> Error!</h5>
+                Data barang tidak ditemukan..
+                </div>'
+            ];
+
+            session()->setFlashdata($pesan_error);
             return redirect()->to('/barang/index');
         }
     }

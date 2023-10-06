@@ -46,6 +46,14 @@ Manajemen Data Barang
                         <i class="fa fa-edit"></i>
                     </button>
 
+                    <form method="POST" action="/barang/hapus/<?= $row['brgkode'] ?>" style="display:inline;" onsubmit="return hapus();">
+                        <input type="hidden" value="DELETE" name="_method">
+
+                        <button type="submit" class="btn btn-sm btn-danger" title="Hapus Data">
+                            <i class="fa fa-trash-alt"></i>
+                        </button>
+                    </form>
+
                 </td>
             </tr>
 
@@ -56,6 +64,15 @@ Manajemen Data Barang
 <script>
     function edit(kode) {
         window.location.href = ('/barang/edit/' + kode);
+    }
+
+    function hapus(kode) {
+        pesan = confirm('Yakin data barang ini dihapus ?');
+        if (pesan) {
+            return true;
+        } else {
+            return false;
+        }
     }
 </script>
 
