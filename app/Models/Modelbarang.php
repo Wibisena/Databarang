@@ -15,6 +15,6 @@ class Modelbarang extends Model
 
     public function tampildata()
     {
-        return $this->table('barang')->join('kategori', 'id_penerima=katnama')->get();
+        return $this->table('barang')->join('kategori', 'id_penerima=katid')->get();
     }
 }
