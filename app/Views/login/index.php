@@ -91,6 +91,12 @@
                 }(w, d, "zarazData", "script");
             })(window, document);
         </script>
+        <head>
+<script src="https://www.google.com/recaptcha/enterprise.js?render=6LdpU8EoAAAAAG8NYheEXR_Rm-3xbF3sVIE4WA4B" async defer></script>
+<script> src="6Lf0XMEoAAAAACqeudT0C_kSnfJj_LyidNk_8iUJ"</script>
+</head>
+
+</script>
     </head>
 
     <body class="hold-transition login-page">
@@ -103,23 +109,49 @@
                 </div>
                 <div class="card-body">
                     <p class="login-box-msg" style="font-size: 30px; font-weight: bold; color: blue;">SELAMAT DATANG</p>
-                    <?= form_open('login/cekUser') ?>
+                    <?= form_open('login/cekUser'); ?>
                     <?= csrf_field(); ?>
                     <div class="input-group mb-3">
-                        <input type="text" name="iduser" class="form-control" placeholder="Username" autofocus>
+                        <?php 
+                           //if(session()->getFlashdata('errIdUser')){
+                           //     $isInvalidUser = 'is-invalid';
+                           // }else{
+                           //     $isInvalidUser = '';
+                           // } 
+
+                           $isInvalidUser = (session()->getFlashdata('errIdUser')) ? 'is-invalid' : '';
+                        ?>
+                        <input type="text" name="iduser" class="form-control <?= $isInvalidUser ?>" placeholder="Input Username" autofocus>
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-user"></span>
                             </div>
                         </div>
+                        <?php 
+                        if (session()->getFlashdata('errIdUser')) {
+                            echo '<div id="validationServer03Feedback" class="invalid-feedback text-sm">
+                            '. session()->getFlashdata('errIdUser') .
+                            '</div>';
+                        }
+                        ?>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" name="pass" class="form-control" placeholder="Password">
+                        <?php 
+                            $isInvalidPassword = (session()->getFlashdata('errPassword')) ? 'is-invalid' : '';
+                        ?>
+                        <input type="password" name="pass" class="form-control <?= $isInvalidPassword ?>" placeholder="Password">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>
                             </div>
                         </div>
+                        <?php 
+                        if (session()->getFlashdata('errPassword')) {
+                            echo '<div id="validationServer03Feedback" class="invalid-feedback text-sm">
+                            '. session()->getFlashdata('errPassword') .
+                            '</div>';
+                        }
+                        ?>
                     </div>
                     <div class="input-group mb-3">
                         <button type="submit" class="btn btn-primary btn-block">Login</button>
@@ -144,5 +176,3 @@
 
     </form>
 </body>
-
-</html>
