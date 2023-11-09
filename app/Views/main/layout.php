@@ -62,12 +62,12 @@
                     </div>
                     <div class="d-flex flex-column justify-content-start justify-items-center">
                         <div class="info">
-                            <a href="<?php echo ('http://localhost:8080/login') ?>" class="d-block">Profile </a>
+                            <a class="d-block"><?= session()->get('namauser'); ?></a>
                         </div>
                     </div>
                     <div>
                         <li class="info">
-                            <a href="<?php echo ('http://localhost:8080/login') ?>" class="d-block">
+                            <a href="<?= site_url('login/keluar'); ?>" class="d-block">
                                 <td>
                                     <button type="button" class="btn btn-block btn-danger btn-xs">Log Out</button>
                                 </td>
@@ -82,7 +82,8 @@
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-                        <li class="nav-header">Master</li>
+                        <?php if(session()->idlevel == 1): ?>
+                            <li class="nav-header">Master</li>
                         <li class="nav-item">
                             <a href="<?= site_url('kategori/index'); ?>" class="nav-link">
                                 <i class="nav-icon fa fa-tasks text-primary"></i>
@@ -95,6 +96,30 @@
                                 <p class="text">Barang</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="<?= site_url('surat/index'); ?>" class="nav-link">
+                                <i class="nav-icon fa fa-tasks text-warning"></i>
+                                <p class="text">Surat</p>
+                            </a>
+                        </li>
+                        <?php endif; ?>
+
+                        <?php if(session()->idlevel == 2): ?>
+                        <li class="nav-header">Karyawan</li>
+                        <li class="nav-item">
+                            <a href="<?= site_url('barang/index'); ?>" class="nav-link">
+                                <i class="nav-icon fa fa-tasks text-danger"></i>
+                                <p class="text">Barang</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?= site_url('surat/index'); ?>" class="nav-link">
+                                <i class="nav-icon fa fa-tasks text-warning"></i>
+                                <p class="text">Surat</p>
+                            </a>
+                        </li>
+                        <?php endif; ?>
+
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
