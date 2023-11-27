@@ -95,11 +95,13 @@
 <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdpU8EoAAAAAG8NYheEXR_Rm-3xbF3sVIE4WA4B" async defer></script>
 <script> src="6Lf0XMEoAAAAACqeudT0C_kSnfJj_LyidNk_8iUJ"</script>
 </head>
-
 </script>
-    </head>
 
-    <body class="hold-transition login-page">
+</html>
+
+    <head>
+
+        <body class="hold-transition login-page">
         <div class="login-box">
 
             <div class="card card-outline card-primary">
@@ -113,13 +115,8 @@
                     <?= csrf_field(); ?>
                     <div class="input-group mb-3">
                         <?php 
-                           //if(session()->getFlashdata('errIdUser')){
-                           //     $isInvalidUser = 'is-invalid';
-                           // }else{
-                           //     $isInvalidUser = '';
-                           // } 
-
                            $isInvalidUser = (session()->getFlashdata('errIdUser')) ? 'is-invalid' : '';
+                           
                         ?>
                         <input type="text" name="iduser" class="form-control <?= $isInvalidUser ?>" placeholder="Input Username" autofocus>
                         <div class="input-group-append">
@@ -127,14 +124,20 @@
                                 <span class="fas fa-user"></span>
                             </div>
                         </div>
+                        
+                        <div class="invalid-feedback" id="capcayInvalid"> </div>
                         <?php 
                         if (session()->getFlashdata('errIdUser')) {
                             echo '<div id="validationServer03Feedback" class="invalid-feedback text-sm">
                             '. session()->getFlashdata('errIdUser') .
                             '</div>';
+                            
                         }
+                        
                         ?>
                     </div>
+                    
+                    <div class="invalid-feedback" id="capcayInvalid"></div>
                     <div class="input-group mb-3">
                         <?php 
                             $isInvalidPassword = (session()->getFlashdata('errPassword')) ? 'is-invalid' : '';
@@ -150,29 +153,44 @@
                             echo '<div id="validationServer03Feedback" class="invalid-feedback text-sm">
                             '. session()->getFlashdata('errPassword') .
                             '</div>';
+                            
+                            
                         }
-                        ?>
+                       
+                        
+                    
+                    ?>
+                    <div class="text-center col-md-12 mb-1">
+                        <!-- MENAMPILKAN RECAPTCHA -->
+                        <?= $renderCaptcha; ?>
                     </div>
-                    <div class="input-group mb-3">
-                        <button type="submit" class="btn btn-primary btn-block">Login</button>
-                    </div>
-                    <?= form_close(); ?>
-
                 </div>
 
+                <div class="input-group mb-3">
+                    
+                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    
+                </div>
+            
+                <?= form_close(); ?>
+
             </div>
+            
 
         </div>
 
+        </div>
+        <?= $renderScript; ?>
+    </head>
 
-        <script src="<?= base_url() ?>/plugins/jquery/jquery.min.js"></script>
+    <script src="<?= base_url() ?>/plugins/jquery/jquery.min.js"></script>
 
-        <script src="<?= base_url() ?>/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= base_url() ?>/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-        <script src="<?= base_url() ?>/dist/js/adminlte.min.js?v=3.2.0"></script>
-    </body>
+    <script src="<?= base_url() ?>/dist/js/adminlte.min.js?v=3.2.0"></script>
+</body>
 
-    </html>
+</html>
 
-    </form>
+</form>
 </body>
