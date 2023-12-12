@@ -31,7 +31,7 @@ Form Tambah Barang
 </div>
 
 <div class="form-group row">
-    <label for="" class="col-sm-4 col-form-label">Pilih Kategori</label>
+    <label for="" class="col-sm-4 col-form-label">Pilih Penerima</label>
     <div class="col-sm-4">
         <select name="kategori" id="kategori" class="form-control">
             <option selected value="">=Pilih=</option>

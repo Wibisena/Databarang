@@ -8,7 +8,7 @@ use App\Models\Modelkategori;
 class Kategori extends BaseController
 {
     private $kategori;
-
+    
     public function __construct()
     {
         $this->kategori = new Modelkategori();
@@ -72,7 +72,7 @@ class Kategori extends BaseController
             ]);
 
             $pesan = [
-                'sukses' => '<div class="alert alert-success">Data karyawan berhasil ditambahkan...</div>'
+                'sukses' => '<div class="alert alert-success">Data kategori berhasil ditambahkan...</div>'
             ];
 
             session()->setFlashdata($pesan);
@@ -130,7 +130,7 @@ class Kategori extends BaseController
                 'sukses' => '<div class="alert alert-success alert-dismissible">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                 <h5><i class="icon fas fa-check"></i> Berhasil!</h5>
-                Data karyawan berhasil di update
+                Data kategori berhasil di update
               </div>'
             ];
 
@@ -151,7 +151,7 @@ class Kategori extends BaseController
                 'sukses' => '<div class="alert alert-success alert-dismissible">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                 <h5><i class="icon fas fa-check"></i> Berhasil!</h5>
-                Data karyawan berhasil dihapus...
+                Data kategori berhasil dihapus...
               </div>'
             ];
 

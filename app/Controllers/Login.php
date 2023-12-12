@@ -2,36 +2,104 @@
 
 namespace App\Controllers;
 
+use App\Controllers\BaseController;
+use App\Models\ModelLogin;
+
+use Config\Recaptcha as RecaptchaConfig;
+use App\Libraries\Recaptcha;
+
+
 class Login extends BaseController
 {
+    protected RecaptchaConfig $config;
+    protected Recaptcha $Recaptcha;
+    function __construct()
+    {
+        $this->config = new RecaptchaConfig();
+        $this->Recaptcha = new Recaptcha($this->config);
+    }
     public function index()
     {
-        return view('login/index');
+        $data['renderCaptcha'] = $this->Recaptcha->getWidget(array('data-theme'=>'light'));
+        $data['renderScript'] = $this->Recaptcha->getScriptTag();
+    
+        return view('login/index', $data);
     }
 
-    public function login()
+    public function cekUser()
     {
-        $username = $this->login->post('username');
-        $password = $this->login->post('password');
+        $iduser = $this->request->getPost('iduser');
+        $pass = $this->request->getPost('pass');
 
-        $user = $this->modeluser->check_login($username, $password);
+        $validation = \config\services::validation();
 
-        if ($user) {
-            // Login berhasil, atur sesi atau cookie sesuai kebutuhan
-            // Redirect ke halaman yang sesuai
-            redirect('dashboard');
+        $valid = $this->validate([
+            'iduser' => [
+                'label' => 'ID User',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} tidak boleh kosong'
+                ]
+            ],
+            'pass' => [
+                'label' => 'Password',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} tidak boleh kosong'
+                ]
+            ]
+        ]);
+
+        if (!$valid) {
+            $sessError = [
+                'errIdUser' => $validation->getError('iduser'),
+                'errPassword' => $validation->getError('pass')
+            ];
+
+            session()->setFlashdata($sessError);
+            return redirect()->to(site_url('login/index'));
         } else {
-            // Login gagal, tampilkan pesan error
-            $data['error'] = 'Login gagal, cek kembali username dan password Anda.';
-            $this->load->view('login', $data);
-        }
-        // Validasi form login di sini
-        // Jika validasi berhasil, lakukan autentikasi dan alihkan ke halaman beranda
-        // Jika validasi gagal, kembali ke halaman login dengan pesan kesalahan
-    }
+            $modelLogin = new ModelLogin();
 
-    public function logout()
+            $cekUserLogin = $modelLogin->find($iduser);
+            if ($cekUserLogin == null) {
+                $sessError = [
+                    'errIdUser' => 'Maaf user tidak terdaftar',
+                ];
+
+                session()->setFlashdata($sessError);
+                return redirect()->to(site_url('login/index'));
+            } else {
+                $passwordUser = $cekUserLogin['userpassword'];
+
+                if (password_verify($pass, $passwordUser)) {
+                    // lanjutkan
+                    $idlevel = $cekUserLogin['userlevelid'];
+
+                    $simpan_session = [
+                        'iduser' => $iduser,
+                        'namauser' => $cekUserLogin['usernama'],
+                        'idlevel' => $idlevel
+                    ];
+                    session()->set($simpan_session);
+
+                    return redirect()->to('/main/index');
+                } else {
+                    $sessError = [
+                        'errPassword' => 'Password anda salah',
+                    ];
+
+                    session()->setFlashdata($sessError);
+                    return redirect()->to(site_url('login/index'));
+                }
+        
+            }
+        }    
+    }
+    
+    public function keluar()
     {
-        // Lakukan logout dan alihkan ke halaman login
+        session()->destroy();
+        return redirect()->to('/login/index');
     }
 }

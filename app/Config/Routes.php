@@ -33,9 +33,11 @@ $routes->setAutoRoute(True);
 $routes->get('/', 'Login::index');
 $routes->get('/kategori/hapus/(:any)', 'kategori::index');
 $routes->delete('/kategori/hapus/(:any)', 'kategori::hapus/$1');
-$routes->get('/barang/hapus/(:any)', 'Barang::index');
-$routes->delete('/barang/hapus/(:any)', 'Barang::hapus/$1');
 
+$routes->get('/barang/hapus/(:any)' , 'barang::index');
+$routes->delete('/barang/hapus/(:any)' , 'barang::hapus/$1');
+
+$routes->get('/surat/hapus/(:any)' , 'surat::index');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
